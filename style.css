@@ -1,0 +1,46 @@
+card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    border-radius: 0.75rem; /* rounded-xl */
+    background-color: white;
+    padding: 1.5rem;
+}
+input, textarea, select {
+    border: 1px solid #D1D5DB; /* gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.75rem 1rem;
+    width: 100%;
+    display: block;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #10B981; /* primary-blue (Emerald) */
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+}
+.low-bandwidth-simulation-text {
+    color: #6B7280; /* gray-500 */
+    font-size: 0.875rem; /* text-sm */
+}
+
+
+Tailwind Configuration (Extension)
+
+The following configuration was used to define the custom color palette and font, allowing the use of utility classes like bg-primary-blue and font-sans.
+
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                'primary-blue': '#10B981', // Emerald for a health focus
+                'primary-dark': '#047857',
+                'secondary-gray': '#F3F4F6',
+            },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            }
+        }
+    }
+}
